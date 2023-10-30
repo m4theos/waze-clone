@@ -7,6 +7,7 @@ export default function Maps() {
   const [location, setLocation] = useState(null);
   const [errorMsg, setErrorMsg] = useState(null);
 
+  // Gets live location
   useEffect(() => {
     (async () => {
       let { status } = await Location.requestForegroundPermissionsAsync();
@@ -52,6 +53,7 @@ const styles = StyleSheet.create({
     flex : 1,
   },
   map: {
-    flex: 1,
+    height: "85%",
+    marginTop : "12%"
   },
 });
